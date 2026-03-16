@@ -15,6 +15,9 @@ const PROVIDER_MODELS: Record<string, Model[]> = {
   openai: [
     { id: 'gpt-5.2', displayName: 'GPT 5.2' },
     { id: 'gpt-4.1', displayName: 'GPT 4.1' },
+    { id: 'gpt-4o', displayName: 'GPT-4o' },
+    { id: 'gpt-4o-mini', displayName: 'GPT-4o Mini' },
+    { id: 'gpt-4-turbo', displayName: 'GPT-4 Turbo' },
   ],
   anthropic: [
     { id: 'claude-sonnet-4-6', displayName: 'Sonnet 4.6' },
@@ -32,6 +35,20 @@ const PROVIDER_MODELS: Record<string, Model[]> = {
   deepseek: [
     { id: 'deepseek-chat', displayName: 'DeepSeek V3' },
     { id: 'deepseek-reasoner', displayName: 'DeepSeek R1' },
+  ],
+  openrouter: [
+    { id: 'openai/gpt-4o', displayName: 'OpenAI GPT-4o' },
+    { id: 'openai/gpt-4o-mini', displayName: 'OpenAI GPT-4o Mini' },
+    { id: 'openai/gpt-4-turbo', displayName: 'OpenAI GPT-4 Turbo' },
+    { id: 'google/gemini-2.0-flash-exp', displayName: 'Google Gemini 2.0 Flash' },
+    { id: 'google/gemini-3.1-pro-preview', displayName: 'Google Gemini 3.1 Pro' },
+    { id: 'google/gemini-3-flash-preview', displayName: 'Google Gemini 3 Flash' },
+    { id: 'moonshot/kimi-k2-5', displayName: 'Kimi K2.5' },
+    { id: 'qwen/qwen3-235b-a22b', displayName: 'Qwen3 235B' },
+    { id: 'qwen/qwen-2.5-72b-instruct', displayName: 'Qwen 2.5 72B' },
+    { id: 'anthropic/claude-3.5-sonnet', displayName: 'Claude 3.5 Sonnet' },
+    { id: 'anthropic/claude-3-opus', displayName: 'Claude 3 Opus' },
+    { id: 'deepseek/deepseek-chat', displayName: 'DeepSeek Chat' },
   ],
 };
 

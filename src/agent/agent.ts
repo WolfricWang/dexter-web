@@ -23,6 +23,7 @@ const OVERFLOW_KEEP_TOOL_USES = 3;
  */
 export class Agent {
   private readonly model: string;
+  private readonly modelProvider?: string;
   private readonly maxIterations: number;
   private readonly tools: StructuredToolInterface[];
   private readonly toolMap: Map<string, StructuredToolInterface>;
@@ -36,6 +37,7 @@ export class Agent {
     systemPrompt: string
   ) {
     this.model = config.model ?? DEFAULT_MODEL;
+    this.modelProvider = config.modelProvider;
     this.maxIterations = config.maxIterations ?? DEFAULT_MAX_ITERATIONS;
     this.tools = tools;
     this.toolMap = new Map(tools.map(t => [t.name, t]));
@@ -184,6 +186,7 @@ export class Agent {
   private async callModel(prompt: string, useTools: boolean = true): Promise<{ response: AIMessage | string; usage?: TokenUsage }> {
     const result = await callLlm(prompt, {
       model: this.model,
+      modelProvider: this.modelProvider,
       systemPrompt: this.systemPrompt,
       tools: useTools ? this.tools : undefined,
       signal: this.signal,

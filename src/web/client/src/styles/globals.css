@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark theme defaults */
+html.dark body {
+  background: #09090b;
+  color: #f4f4f5;
+}
+
+html.light body {
+  background: #ffffff;
+  color: #18181b;
+}
+
+/* Scrollbar - Dark */
+html.dark ::-webkit-scrollbar { width: 6px; }
+html.dark ::-webkit-scrollbar-track { background: transparent; }
+html.dark ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 3px; }
+html.dark ::-webkit-scrollbar-thumb:hover { background: #52525b; }
+
+/* Scrollbar - Light */
+html.light ::-webkit-scrollbar { width: 6px; }
+html.light ::-webkit-scrollbar-track { background: transparent; }
+html.light ::-webkit-scrollbar-thumb { background: #d4d4d8; border-radius: 3px; }
+html.light ::-webkit-scrollbar-thumb:hover { background: #a1a1aa; }
+
+/* Markdown in chat - Dark theme */
+html.dark .markdown-content h1,
+html.dark .markdown-content h2,
+html.dark .markdown-content h3 {
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+html.dark .markdown-content h1 { font-size: 1.25rem; }
+html.dark .markdown-content h2 { font-size: 1.125rem; }
+html.dark .markdown-content h3 { font-size: 1rem; }
+
+html.dark .markdown-content p {
+  margin-bottom: 0.75em;
+  line-height: 1.7;
+}
+
+html.dark .markdown-content ul,
+html.dark .markdown-content ol {
+  margin-left: 1.5em;
+  margin-bottom: 0.75em;
+}
+html.dark .markdown-content li { margin-bottom: 0.25em; }
+
+html.dark .markdown-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+  font-size: 0.875rem;
+}
+html.dark .markdown-content th,
+html.dark .markdown-content td {
+  border: 1px solid #3f3f46;
+  padding: 0.5em 0.75em;
+  text-align: left;
+}
+html.dark .markdown-content th { background: #27272a; font-weight: 600; }
+
+html.dark .markdown-content code {
+  background: #27272a;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+html.dark .markdown-content pre {
+  background: #18181b;
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+html.dark .markdown-content pre code { background: transparent; padding: 0; }
+
+html.dark .markdown-content a { color: #60a5fa; text-decoration: underline; }
+html.dark .markdown-content a:hover { color: #93bbfd; }
+
+html.dark .markdown-content blockquote {
+  border-left: 3px solid #3b82f6;
+  padding-left: 1em;
+  margin-left: 0;
+  color: #a1a1aa;
+}
+
+/* Markdown in chat - Light theme */
+html.light .markdown-content h1,
+html.light .markdown-content h2,
+html.light .markdown-content h3 {
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: #18181b;
+}
+html.light .markdown-content h1 { font-size: 1.25rem; }
+html.light .markdown-content h2 { font-size: 1.125rem; }
+html.light .markdown-content h3 { font-size: 1rem; }
+
+html.light .markdown-content p {
+  margin-bottom: 0.75em;
+  line-height: 1.7;
+}
+
+html.light .markdown-content ul,
+html.light .markdown-content ol {
+  margin-left: 1.5em;
+  margin-bottom: 0.75em;
+}
+html.light .markdown-content li { margin-bottom: 0.25em; }
+
+html.light .markdown-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+  font-size: 0.875rem;
+}
+html.light .markdown-content th,
+html.light .markdown-content td {
+  border: 1px solid #e4e4e7;
+  padding: 0.5em 0.75em;
+  text-align: left;
+}
+html.light .markdown-content th { background: #f4f4f5; font-weight: 600; }
+
+html.light .markdown-content code {
+  background: #f4f4f5;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.875em;
+  color: #18181b;
+}
+html.light .markdown-content pre {
+  background: #f4f4f5;
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+html.light .markdown-content pre code { background: transparent; padding: 0; }
+
+html.light .markdown-content a { color: #2563eb; text-decoration: underline; }
+html.light .markdown-content a:hover { color: #1d4ed8; }
+
+html.light .markdown-content blockquote {
+  border-left: 3px solid #3b82f6;
+  padding-left: 1em;
+  margin-left: 0;
+  color: #71717a;
+}
